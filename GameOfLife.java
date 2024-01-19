@@ -140,7 +140,7 @@ public class GameOfLife {
 		int arrCol = arr[0].length - 1;
 		for (int i = 1 ; i < arrRow ; i++) {
 			for (int j = 1 ; j < arrCol ; j++) {
-				 System.out.printf("%4s", arr[i][j]);
+				 System.out.printf("%3s", arr[i][j]);
 			}
 			System.out.println();
 		}
