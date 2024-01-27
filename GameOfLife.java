@@ -104,6 +104,7 @@ public class GameOfLife {
 	// Uses the count(board,i,j) function to count the number of alive neighbors.
 	public static int cellValue(int[][] board, int i, int j) {
 		int value = 0;
+		// #feedback - to make the program more efficient, it is better to call count once and store it in a variable.
 		if (board [i][j] == 1 
 		    && count(board,i,j) == 2 || count(board,i,j) == 3) {
                     value = 1;
@@ -121,6 +122,7 @@ public class GameOfLife {
 	// Assumes that j is at least 1 and at most the number of columns in the board - 1. 
 	public static int count(int[][] board, int i, int j) {
 		int countNum = 0;
+		// #feedback - it is usually better to use for loop in these cases, since it's easier to forget a cell or have the wrong row/col.
 		countNum += (board[i-1][j-1] == 1 ? 1 : 0);
 		countNum += (board[i-1][j] == 1 ? 1 : 0);
 		countNum += (board[i-1][j+1] == 1 ? 1 : 0);
